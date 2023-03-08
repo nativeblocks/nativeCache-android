@@ -4,6 +4,8 @@ import android.content.SharedPreferences
 import io.nativeblocks.cache.CacheTime.EXPIRE_TIME
 import io.nativeblocks.cache.CacheTime.NONE_EXPIRE_TIME
 
+const val NATIVE_LOCAL_CACHE = "nativeblocks_sdk_storage"
+
 class NativeLocalCacheProvider constructor(
     private val sharedPreferences: SharedPreferences
 ) : INativeCache {
