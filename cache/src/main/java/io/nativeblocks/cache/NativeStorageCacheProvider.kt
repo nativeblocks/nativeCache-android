@@ -11,11 +11,8 @@ class NativeStorageCacheProvider constructor(
     context: Context
 ) : INativeCache {
 
-    private var sharedPreferences: SharedPreferences
-
-    init {
-        sharedPreferences = context.getSharedPreferences(NATIVE_STORAGE_CACHE, Context.MODE_PRIVATE)
-    }
+    private var sharedPreferences: SharedPreferences =
+        context.getSharedPreferences(NATIVE_STORAGE_CACHE, Context.MODE_PRIVATE)
 
     private val postFixTimeToLife = "timeToLife"
 
