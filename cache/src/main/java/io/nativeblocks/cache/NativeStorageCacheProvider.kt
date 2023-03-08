@@ -1,5 +1,6 @@
 package io.nativeblocks.cache
 
+import android.content.Context
 import android.content.SharedPreferences
 import io.nativeblocks.cache.CacheTime.EXPIRE_TIME
 import io.nativeblocks.cache.CacheTime.NONE_EXPIRE_TIME
@@ -7,8 +8,14 @@ import io.nativeblocks.cache.CacheTime.NONE_EXPIRE_TIME
 const val NATIVE_STORAGE_CACHE = "nativeblocks_sdk_storage"
 
 class NativeStorageCacheProvider constructor(
-    private val sharedPreferences: SharedPreferences
+    context: Context
 ) : INativeCache {
+
+    private var sharedPreferences: SharedPreferences
+
+    init {
+        sharedPreferences = context.getSharedPreferences(NATIVE_STORAGE_CACHE, Context.MODE_PRIVATE)
+    }
 
     private val postFixTimeToLife = "timeToLife"
 
