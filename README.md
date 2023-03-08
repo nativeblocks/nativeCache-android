@@ -27,6 +27,6 @@ add to module build.gradle
 
 ```groovy
 
-implementation 'com.github.nativeblocks:NativeCache:{latest-version}'
+implementation 'com.github.nativeblocks:NativeCache-Android:{latest-version}'
 
 ```
