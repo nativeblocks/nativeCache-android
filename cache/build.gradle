@@ -35,7 +35,7 @@ publishing {
     publications {
         release(MavenPublication) {
             groupId = 'com.github.nativeblocks'
-            artifactId = 'NativeCache-Android'
+            artifactId = 'nativeCache-android'
             version = '0.1.0'
 
             afterEvaluate {
